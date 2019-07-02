@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "21323b51-f37b-45dd-ad6b-0a5cd1f115b9",
+		"name": "RESTFull Api with Spring Boot",
+		"description": "Some description about API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Books",
+					"item": [
+						{
+							"name": "Procurar todos os Books",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml, application/json, application/x-yaml"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/books/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir um novo Book",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml, application/json, application/x-yaml"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/xml"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "book"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/books/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Procurar um Book por id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml, application/json, application/x-yaml"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/books/v1/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "7e1c5c06-f932-4058-abc7-db85de36a044",
+											"key": "id",
+											"type": "string",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza um Book existente",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml, application/json, application/x-yaml"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/xml"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "book"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/books/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deleta um book no sistema",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/books/v1/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"books",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "e7870c89-f2be-449e-804c-1ff6a56e0cae",
+											"key": "id",
+											"type": "string",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Person",
+					"item": [
+						{
+							"name": "Procurar todos os persons",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml, application/json, application/x-yaml"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/person/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"person",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualizar um Person por Id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml, application/json, application/x-yaml"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/xml"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "person"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/person/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"person",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Incluir um novo Person",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml, application/json, application/x-yaml"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/xml"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "person"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/person/v1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"person",
+										"v1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createV2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "person"
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/person/v1/v2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"person",
+										"v1",
+										"v2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Procurar um person por id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml, application/json, application/x-yaml"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/person/v1/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"person",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "9b49c81b-14c2-4d04-a7ef-95e993fc5f8d",
+											"key": "id",
+											"type": "string",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar um Persons",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/person/v1/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"person",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "9e6be2a5-dcb3-4099-9565-9949d03900e0",
+											"key": "id",
+											"type": "string",
+											"value": "{{id}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			],
+			"description": "Folder for api"
+		}
+	]
+}
